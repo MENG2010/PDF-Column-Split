@@ -22,3 +22,20 @@ pip install pymupdf
 ```shell
 python split_columns.py input.pdf [output.pdf]
 ```
+
+
+**Example:**
+
+<table>
+<tr>
+<td align="center">
+<img src="before.png" width="40%"><br>
+<b>(a) Before</b>
+</td>
+
+<td align="center">
+<img src="after.png" width="60%"><br>
+<b>(b) After</b>
+</td>
+</tr>
+</table>
