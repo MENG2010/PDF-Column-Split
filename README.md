@@ -20,5 +20,5 @@ pip install pymupdf
 
 **Usage:**
 ```shell
-python pdf_splitter.py input.pdf [output.pdf]
+python split_columns.py input.pdf [output.pdf]
 ```
