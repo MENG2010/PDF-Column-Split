@@ -24,7 +24,9 @@ pip install pymupdf
 python split_columns.py input.pdf [output.pdf]
 ```
 
-> **If you find this project helpful, please consider giving it a "Star". Thank you for your support.**
+> **If you find this project helpful, please consider giving it a GitHub Star ⭐. Thank you for your support.**
+>
+> **Contributions are welcome! If you improve this tool, please preserve the original attribution. I appreciate your contributions.**
 
 ## Example
 
