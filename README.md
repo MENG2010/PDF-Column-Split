@@ -1,40 +1,42 @@
-This script splits a two-column PDF into one-column-per-page while preserving the layout of spanning elements. It requires PyMuPDF and allows for the processing of back matter in the document.
+This script splits a two-column PDF into one-column-per-page while preserving the layout of column-spanning elements. It is based on PyMuPDF and supports processing the back matter of a document.
 
-Each source page becomes (up to) two output pages of the SAME page size:
-  * Page L: left column at its original position + all column-spanning
-    elements (figures, tables, title block, ...) kept full-width.
-  * Page R: right column only (spanning elements are blanked out here).
-The unused half of each page stays blank for handwritten notes.
+Each source page becomes (up to) two output pages of the **same** page size:
 
-Spanning elements are detected automatically from text blocks, images, and vector drawings that cross the inter-column gap.
+- **Page L:** Left column at its original position, with all column-spanning elements (e.g., figures, tables, title block, etc.) preserved at their original full width.
+- **Page R:** Right column only; column-spanning elements are blanked out.
+- The unused half of each page is left blank for handwritten notes.
 
-**The default setting works well for most commonly-used academic templates, with negligable issues on column-spanning objects (typically figures and tables).**
+Column-spanning elements are detected automatically from text blocks, images, and vector drawings that cross the inter-column gap.
 
-**Requires:**
+> **The default settings work well for most commonly used academic paper templates, with negligible issues in handling column-spanning elements (typically figures and tables).**
 
-Install the required lib with this command:
+## Requirements
+
+Install the required library:
+
 ```shell
 pip install pymupdf
 ```
 
+## Usage
 
-**Usage:**
 ```shell
 python split_columns.py input.pdf [output.pdf]
 ```
 
+> **If you find this project helpful, please consider giving it a "Star". Thank you for your support.**
 
-**Example:**
+## Example
 
 <table>
 <tr>
-<td align="center">
-<img src="before.png" width="40%"><br>
+<td align="center" width="49%">
+<img src="before.png"><br>
 <b>(a) Before</b>
 </td>
 
-<td align="center">
-<img src="after.png" width="60%"><br>
+<td align="center" width="49%">
+<img src="after.png"><br>
 <b>(b) After</b>
 </td>
 </tr>
