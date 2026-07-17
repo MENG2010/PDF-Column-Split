@@ -20,13 +20,29 @@ pip install pymupdf
 
 ## Usage
 
+### Basic Usage
+Split a two-column PDF using the default settings.
+
 ```shell
 python split_columns.py input.pdf [output.pdf]
 ```
+### Remove gaps caused by column-spanning elements
+By default, the right-column page preserves the original vertical layout, leaving blank regions where column-spanning figures, tables, or other elements appeared.
 
-> **If you find this project helpful, please consider giving it a GitHub Star ⭐. Thank you for your support.**
->
-> **Contributions are welcome! If you improve this tool, please preserve the original attribution. I appreciate your contributions.**
+To remove these blank regions and shift the remaining right-column content upward, use:
+```shell
+python split_columns.py input.pdf [output.pdf] --remove-spanning-gaps
+```
+
+### Customize spanning-element detection
+You can also customize the crossing tolerance (`tol`, `pad`, and `min-draw-area`) when spanning elements are not detected correctly. For example,
+```shell
+python split_columns.py input.pdf [output.pdf] \
+  --remove-spanning-gaps \
+  --tol 10 \
+  --pad 5 \
+  --min-draw-area 800
+``` 
 
 ## Example
 
@@ -43,3 +59,11 @@ python split_columns.py input.pdf [output.pdf]
 </td>
 </tr>
 </table>
+
+## Acknowledgements
+
+---
+> **If you find this project helpful, please consider giving it a GitHub Star ⭐. Your support is greatly appreciated!**
+>
+> **Contributions are welcome! If you improve this tool, please preserve the original attribution. Thank you for contributing!**
+---
